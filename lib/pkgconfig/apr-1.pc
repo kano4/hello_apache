@@ -1,0 +1,11 @@
+prefix=/home/kano/apache
+exec_prefix=/home/kano/apache
+libdir=${prefix}/lib
+APR_MAJOR_VERSION=1
+includedir=/home/kano/apache/include
+
+Name: APR
+Description: The Apache Portable Runtime library
+Version: 1.4.5
+Libs: -L${libdir} -lapr-${APR_MAJOR_VERSION} -lrt -lcrypt  -lpthread -ldl
+Cflags: -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -g -O2 -pthread -I${includedir}
